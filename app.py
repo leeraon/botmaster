@@ -17,16 +17,16 @@ User = Autobase(config)
 ## User2 = Autobase(config2)
 
 # SETTING NGROK AND WEBHOOK SERVER
-url = webMan.connect_ngrok(config.NGROK_AUTH_TOKEN)
+url = webMan.connect_ngrok(config.25mNvg7ptjxqrqWXh1uy06vtWNv_3smpHzoAu1i8cEFT18ReF)
 server = webMan.server_config(
     url=url+"/listener",
     dict_credential={
-        User.bot_username : config.CONSUMER_SECRET,
-        ## User2.bot_username : config2.CONSUMER_SECRET
+        User.elevenrynnn : config.foeFjJZsQgGBk5n3ZSAqNhSH4,
+        ## User2.elevenrynnn : config2.foeFjJZsQgGBk5n3ZSAqNhSH4
     },
     dict_func={
-        User.bot_id : User.webhook_connector,
-        ## User2.bot_id : User2.webhook_connector
+        User.23528047 : User.webhook_connector,
+        ## User2.23528047 : User2.webhook_connector
     },
     subscribe=[
         'direct_message_events',
@@ -41,5 +41,5 @@ while post(url+"/listener/test").status_code != 200:
     sleep(1)
 
 # REGISTER WEBHOOK
-webMan.register_webhook(url+"/listener", User.bot_username, config)
-## webMan.register_webhook(url+"/listener", User2.bot_username, config2)
+webMan.register_webhook(url+"/listener", User.elevenrynnn, config)
+## webMan.register_webhook(url+"/listener", User2.elevenrynnn, config2)
