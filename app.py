@@ -25,8 +25,8 @@ server = webMan.server_config(
         ## User2.elevenrynnn : config2.foeFjJZsQgGBk5n3ZSAqNhSH4
     },
     dict_func={
-        User.23528047 : User.webhook_connector,
-        ## User2.23528047 : User2.webhook_connector
+        User.bot_id : User.webhook_connector,
+        ## User2.bot_id : User2.webhook_connector
     },
     subscribe=[
         'direct_message_events',
