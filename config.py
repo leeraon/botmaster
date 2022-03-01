@@ -1,4 +1,4 @@
-NGROK_AUTH_TOKEN = "25mNvg7ptjxqrqWXh1uy06vtWNv_3smpHzoAu1i8cEFT18ReF"
+NGROK_AUTH_TOKEN = "25miHzZCrsdFJctod3kvVmTpPFb_3D5xuLTSUWEL55QqBDBEP"
 # copy the auth token from https://dashboard.ngrok.com/get-started/your-authtoken
 # you don't need to fill ngrok auth token for debugging on local
 
@@ -11,7 +11,7 @@ ENV_NAME = "elevenrynnn"
 # ENV_NAME is the same as Dev environment label
 # Check your AAPI subcription renewal date on https://developer.twitter.com/en/account/subscriptions
 
-Admin_id = ["sacredtimelines"] # list of str
+Admin_id = ["326512651"] # list of str
 # Admin id is like sender id. To check it, send a menfess from your admin account.
 # IF YOU WANT TO TEST THE CONFIG, REMEMBER THIS! USERS IN ADMIN_ID PASS ALL USER'S FILTERS, you should delete your id on Admin_id
 
