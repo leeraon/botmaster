@@ -1,17 +1,17 @@
-NGROK_AUTH_TOKEN = ""
+NGROK_AUTH_TOKEN = "25mNvg7ptjxqrqWXh1uy06vtWNv_3smpHzoAu1i8cEFT18ReF"
 # copy the auth token from https://dashboard.ngrok.com/get-started/your-authtoken
 # you don't need to fill ngrok auth token for debugging on local
 
-CONSUMER_KEY = ""
-CONSUMER_SECRET = ""
-ACCESS_KEY = ""
-ACCESS_SECRET = ""
+CONSUMER_KEY = "ZO9kkTFlscNNTwYPYpl0gxRGB"
+CONSUMER_SECRET = "PSfuBgoc2kvCmntErQI2Bl5hl1KVkbK9wUXRnukXBD10yCZUmD"
+ACCESS_KEY = "ZO9kkTFlscNNTwYPYpl0gxRGB"
+ACCESS_SECRET = "PSfuBgoc2kvCmntErQI2Bl5hl1KVkbK9wUXRnukXBD10yCZUmD"
 ENV_NAME = ""
 # create Account Activity API (AAPI) dev env on https://developer.twitter.com/en/account/environments
 # ENV_NAME is the same as Dev environment label
 # Check your AAPI subcription renewal date on https://developer.twitter.com/en/account/subscriptions
 
-Admin_id = [""] # list of str
+Admin_id = ["sacredtimelines"] # list of str
 # Admin id is like sender id. To check it, send a menfess from your admin account.
 # IF YOU WANT TO TEST THE CONFIG, REMEMBER THIS! USERS IN ADMIN_ID PASS ALL USER'S FILTERS, you should delete your id on Admin_id
 
@@ -26,13 +26,13 @@ Notify_queueMessage = "Menfess kamu berada pada urutan ke-{}, akan terkirim seki
 
 Notify_sent = True
 # bool, True: Send menfess tweet link to sender when menfess sent
-Notify_sentMessage = "Yeay! Menfess kamu telah terkirim! https://twitter.com/{}/status/"
+Notify_sentMessage = "Hooray! Menfess kamu telah terkirim! https://twitter.com/{}/status/"
 # Please keep the "{}" format -> .format(bot_username) + postid
 
-Notify_sentFail1 = "Maaf ada kesalahan pada sistem :( \ntolong screenshot & laporkan kepada admin"
+Notify_sentFail1 = "Maaf ada kesalahan pada sistem ): \ntolong screenshot & laporkan kepada admin"
 # Used when error is happened in system
 
-Interval_perSender = False # bool
+Interval_perSender = True # bool
 Interval_time = 5 # int
 # Interval time (in minute) of sending menfess per sender, Admin pass this filter
 Notify_intervalPerSender = "Mengirim menfess dibatasi! silakan coba lagi setelah pukul {}"
@@ -45,14 +45,14 @@ Delay_time = 24 # int, seconds
 
 # Welcome message to new followers
 Greet_newFollower = True
-Notif_newFollower = "Makasih yaa udah follow base ini :) \nJangan lupa baca peraturan base!"
+Notif_newFollower = "Makasiii udah follow base ini :) \nJangan lupa baca peraturan base!"
 
 Keyword_deleter = False # Trigger word deleter
 # bool, True: Delete keyword from menfess before uploaded
 
 # send notif to user that followed by bot
 Greet_followed = True
-Notif_followed = "Yeay! kamu udah difollow base ini. Jangan lupa baca peraturan sebelum mengirim menfess yaa!"
+Notif_followed = "Hooray! kamu udah difollow base ini. Jangan lupa baca peraturan sebelum mengirim menfess yaa!"
 
 Minimum_lenMenfess = 0 # length of the menfess
 Maximum_lenMenfess = 1120
@@ -66,15 +66,15 @@ Notif_twitterUrl = "Kamu hanya bisa mengirim url yang berasal dari twitter :("
 
 Verify_beforeSent = True
 Verify_beforeSentData = {
-    'text'      : 'Baca dulu peraturan base di blabla. Kamu yakin mau mengirim menfess ini?',
+    'text'      : 'Pastikan ga melanggar rules yaa. Kamu yakin mau mengirim menfess ini?',
     'options'   : [
         {
-            'label'         : 'ya',
+            'label'         : 'Ya',
             'description'   : 'melanjutkan untuk mengirim menfess', # max 72 chars (include space)
             'metadata'      : 'exec|self._verif_menfess("accept", sender_id)'
         },
         {
-            'label'         : 'tidak',
+            'label'         : 'Tidak',
             'description'   : 'membatalkan untuk mengirim menfess', # max 72 chars (include space)
             'metadata'      : 'exec|self._verif_menfess("reject", sender_id)'
         }
@@ -93,7 +93,7 @@ Minimum_day = 0 # e.g 100, it means sender account must be created at 100 days a
 Notify_senderRequirements = f"Kamu harus punya {Minimum_followers} followers dan umur akun kamu harus \
 lebih dari {Minimum_day} hari biar bisa ngirim menfess :("
 
-Private_mediaTweet = False
+Private_mediaTweet = True
 # bool, True: Delete username on the bottom of the attached video tweet.
 # Usually when sender want to attach video (from tweet), they will attach a media url
 # But the username of the (VIDEO) OWNER is mentioned on the bottom of video. With this
@@ -129,7 +129,7 @@ Off_scheduleData = {
 Off_scheduleMsg = f"Automenfess dimatikan setiap pukul {Off_scheduleData['start'][0]}:{Off_scheduleData['start'][1]} \
 sampai dengan pukul {Off_scheduleData['end'][0]}:{Off_scheduleData['end'][1]}"
 
-Trigger_word = ["fess!", "blablabla!"]
+Trigger_word = ["guys!", "ask!" "info!"]
 Notify_wrongTrigger = {
     'user'      : True, # send notif to user
     'admin'     : False, # send wrong trigger menfess to admin
@@ -140,7 +140,7 @@ Sensitive_word = "/sensitive"
 # Used when sender send sensitive content, order them to use this word
 # But I advise against sending sensitive content, Twitter may ban your account,
 # And using this bot for 'adult' base is strictly prohibited.
-Blacklist_words = ['covid', 'blablabla'] 
+Blacklist_words = ['covid'] 
 # hashtags and mentions will be changed to "#." and "@."
 Notify_blacklistWords = "di menfess kamu terdapat blacklist words, jangan lupa baca peraturan base yaa!"
 Notify_blacklistWordsAdmin = False # Will be sent to admin
@@ -174,14 +174,14 @@ User_cmd = {
 # /delete and /unsend is not available for user when bot was just started and user id not in db_sent
 # /delete & db_sent are only available for one day (reset every midnight or heroku dyno cycling)
 Notif_DMCmdDelete = {
-    'succeed'   : 'Yeay! Menfess kamu sudah berhasil dihapus',
-    'failed'    : 'Duh! Menfess ini ngga bisa kamu hapus :('
+    'succeed'   : 'Menfess kamu sudah berhasil dihapus',
+    'failed'    : 'Yah! Menfess ini ngga bisa kamu hapus ):'
 }
 # Notif_DMCmdDelete is only for user, '/unsend' using this notif too
 Notif_DMCmdCancel = {
-    'succeed'   : 'Yeay! Menfess kamu berhasil di-cancel',
-    'failed'    : 'Duh! Menfess kamu ngga bisa di-cancel',
-    'on_process': 'Duh! Menfess kamu lagi diproses, kirim "/unsend" setelah menfess terkirim',
+    'succeed'   : 'Menfess kamu berhasil di-cancel',
+    'failed'    : 'Yah! Menfess kamu ngga bisa di-cancel',
+    'on_process': 'Menfess kamu lagi diproses, kirim "/unsend" setelah menfess terkirim',
 }
 
 # Max 20 options, Max 72 chars description, Please keep the metadata, Read metadata doc at README.md
