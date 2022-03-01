@@ -17,7 +17,7 @@ User = Autobase(config)
 ## User2 = Autobase(config2)
 
 # SETTING NGROK AND WEBHOOK SERVER
-url = webMan.connect_ngrok(config."25mNvg7ptjxqrqWXh1uy06vtWNv_3smpHzoAu1i8cEFT18ReF")
+url = webMan.connect_ngrok(config.NGROK_AUTH_TOKEN)
 server = webMan.server_config(
     url=url+"/listener",
     dict_credential={
