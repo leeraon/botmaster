@@ -2,11 +2,11 @@ NGROK_AUTH_TOKEN = "25mNvg7ptjxqrqWXh1uy06vtWNv_3smpHzoAu1i8cEFT18ReF"
 # copy the auth token from https://dashboard.ngrok.com/get-started/your-authtoken
 # you don't need to fill ngrok auth token for debugging on local
 
-CONSUMER_KEY = "ZO9kkTFlscNNTwYPYpl0gxRGB"
-CONSUMER_SECRET = "PSfuBgoc2kvCmntErQI2Bl5hl1KVkbK9wUXRnukXBD10yCZUmD"
-ACCESS_KEY = "ZO9kkTFlscNNTwYPYpl0gxRGB"
-ACCESS_SECRET = "PSfuBgoc2kvCmntErQI2Bl5hl1KVkbK9wUXRnukXBD10yCZUmD"
-ENV_NAME = ""
+CONSUMER_KEY = "foeFjJZsQgGBk5n3ZSAqNhSH4"
+CONSUMER_SECRET = "I70isdNnUTj0RmQxVLdBmzuXQjZQh3SKM170KGpxJokOaK9NsM"
+ACCESS_KEY = "1497107608612007937-QGrd88QOYUBMJ0zlGClLfveEQ1JQhu"
+ACCESS_SECRET = "yqbqpnBDwp0TFrSxNuY8U2a3DvxaUNYPnyJBXPo8gPrJu"
+ENV_NAME = "elevenrynnn"
 # create Account Activity API (AAPI) dev env on https://developer.twitter.com/en/account/environments
 # ENV_NAME is the same as Dev environment label
 # Check your AAPI subcription renewal date on https://developer.twitter.com/en/account/subscriptions
